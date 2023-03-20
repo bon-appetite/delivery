@@ -292,6 +292,14 @@ iframe {
     line-height: 32px;
 }
 
+.misalignCardTitle {
+    margin-left: 15px;
+}
+
+.misalignCardPrice {
+    margin-top: 10px;
+}
+
 .card-title-reg {
     font-weight: 400;
 }

@@ -116,19 +116,22 @@ function createCardRestaurant(restaurant) {
     stars, 
     time_of_delivery: timeOfDelivery } = restaurant;
 
+  const misalignTitle = kitchen == 'Pizza'  ? 'misalignCardTitle' : '';
+  const misalignPrice = kitchen.includes('cuisine')  ? 'misalignCardPrice' : '';
+
   const card = `
         <a class="card card-restaurant" data-products="${products}">
         <img src="${image}" alt="image" class="card-image"/>
         <div class="card-text">
           <div class="card-heading">
-            <h3 class="card-title">${name}</h3>
+            <h3 class="card-title ${misalignTitle}">${name}</h3>
             <span class="card-tag tag">${timeOfDelivery} min</span>
           </div>
           <div class="card-info">
             <div class="rating">
               ${stars}
             </div>
-            <div class="price">from ${price} $</div>
+            <div class="price ${misalignPrice}">from ${price} $</div>
             <div class="category">${kitchen}</div>
           </div>
         </div>
